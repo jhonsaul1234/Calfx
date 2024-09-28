@@ -55,7 +55,7 @@ public class CalcControl {
 
     @FXML
     public void accionButton(ActionEvent event){
-        System.out.println("Holas");
+        System.out.println("Jhon Saul Mamani Cruz ");
         Button button= (Button)event.getSource();
         switch (button.getId()){
             case "btn7","btn8","btn9","btn6","btn5","btn4","btn3","btn2","btn1","btn0":{
