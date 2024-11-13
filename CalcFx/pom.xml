@@ -60,6 +60,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 
 		<!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
 		<dependency>
@@ -87,6 +88,8 @@
 		</dependency>
 
 
+=======
+>>>>>>> dd8398c3f766db5560c1ec9c6232f3664bd920d5
 	</dependencies>
 
 	<build>

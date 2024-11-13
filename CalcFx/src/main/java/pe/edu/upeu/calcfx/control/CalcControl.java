@@ -55,7 +55,11 @@ public class CalcControl {
 
     @FXML
     public void accionButton(ActionEvent event){
+<<<<<<< HEAD
         System.out.println("Holas");
+=======
+        System.out.println("Jhon Saul Mamani Cruz ");
+>>>>>>> dd8398c3f766db5560c1ec9c6232f3664bd920d5
         Button button= (Button)event.getSource();
         switch (button.getId()){
             case "btn7","btn8","btn9","btn6","btn5","btn4","btn3","btn2","btn1","btn0":{
@@ -106,13 +110,20 @@ public class CalcControl {
         }
 
         CalcTO to=new CalcTO();
+<<<<<<< HEAD
         to.setId(Long.parseLong(String.valueOf(indexEdit)));
+=======
+>>>>>>> dd8398c3f766db5560c1ec9c6232f3664bd920d5
         to.setNum1(String.valueOf(val1));
         to.setNum2(String.valueOf(val2));
         to.setOperador(valores[1].charAt(0));
         to.setResultado(String.valueOf(txtResultado.getText()));
         if(indexEdit!=-1){
+<<<<<<< HEAD
             serviceI.actualizarResultados(to, to.getId());
+=======
+            serviceI.actualizarResultados(to, indexEdit);
+>>>>>>> dd8398c3f766db5560c1ec9c6232f3664bd920d5
         }else{
             serviceI.guardarResultados(to);
         }
@@ -120,6 +131,7 @@ public class CalcControl {
         listaOper();
     }
 
+<<<<<<< HEAD
     private void editOperCalc(CalcTO cal, Long index) {
         System.out.println("Editing: " + cal.getNum1() + " Index:"+index);
         txtResultado.setText(cal.getNum1()+" "+cal.getOperador()+" "+cal.getNum2());
@@ -127,6 +139,15 @@ public class CalcControl {
     }
 
     private void deleteOperCalc(CalcTO cal, Long index) {
+=======
+    private void editOperCalc(CalcTO cal, int index) {
+        System.out.println("Editing: " + cal.getNum1() + " Index:"+index);
+        txtResultado.setText(cal.getNum1()+" "+cal.getOperador()+" "+cal.getNum2());
+        indexEdit=index;
+    }
+
+    private void deleteOperCalc(CalcTO cal, int index) {
+>>>>>>> dd8398c3f766db5560c1ec9c6232f3664bd920d5
         System.out.println("Deleting: " + cal.getNum2());
         serviceI.eliminarResultados(index);
         listaOper();
@@ -144,13 +165,21 @@ public class CalcControl {
                 editButton.getStyleClass().setAll("btn", "btn-success");
                 editButton.setOnAction(event -> {
                     CalcTO cal = getTableView().getItems().get(getIndex());
+<<<<<<< HEAD
                     editOperCalc(cal, cal.getId());
+=======
+                    editOperCalc(cal, getIndex());
+>>>>>>> dd8398c3f766db5560c1ec9c6232f3664bd920d5
                 });
 
                 deleteButton.getStyleClass().setAll("btn", "btn-danger");
                 deleteButton.setOnAction(event -> {
                     CalcTO cal = getTableView().getItems().get(getIndex());
+<<<<<<< HEAD
                     deleteOperCalc(cal,cal.getId());
+=======
+                    deleteOperCalc(cal,getIndex());
+>>>>>>> dd8398c3f766db5560c1ec9c6232f3664bd920d5
                 });
             }
 
